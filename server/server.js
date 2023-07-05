@@ -1,5 +1,6 @@
 const PORT = 3001;
 
+const uuid = require('uuid');
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -9,10 +10,14 @@ const cors = require('cors');
 
 const io = new Server(server, {
     cors: {
-        origin: `http://${process.env.REACT_APP_HOST}:${PORT}/`,
+        origin: '*',
         methods: ["GET", "POST"]
     }
 });
+
+io.engine.generateId = (req) => {
+    return uuid.v4();
+}
 
 io.on("connection", (socket) => {
     console.log(`New connection: ${socket.id}`);
