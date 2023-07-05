@@ -1,0 +1,22 @@
+:root {
+    --background-color: #333;
+    --foreground-color: #DDD;
+
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+body > * {
+    color: var(--foreground-color);
+}
+
+/*
+    This is ReactJS auto-generated .root div, not the
+    same as the HTML root tag.
+*/
+.root {
+
+}
