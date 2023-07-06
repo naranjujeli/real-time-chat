@@ -1,9 +1,7 @@
-export default function Message({ children }) {
+export default function Message({ username, children }) {
   return (
     <div className="Message">
-      <p>
-      {children}
-      </p>
+      <p><b>{username}</b> {children}</p>
     </div>
   );
 }

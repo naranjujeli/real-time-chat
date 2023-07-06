@@ -19,8 +19,17 @@ io.engine.generateId = (req) => {
     return uuid.v4();
 }
 
+let messagesHistory = [];
 io.on("connection", (socket) => {
     console.log(`New connection: ${socket.id}`);
+    
+    io.emit("update-messages-history", { messagesHistory });
+
+    socket.on("new-message", (data) => {
+        console.log("Received data: " + data.content);
+        messagesHistory.push({ userId: socket.id, content: data.content });
+        io.emit("update-messages-history", { messagesHistory });
+    });
 });
 
 server.listen(PORT, () => {
