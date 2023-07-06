@@ -1,0 +1,11 @@
+.ChatContainer {
+    width: clamp(30vw, 100vh, 100vw);
+    max-height: 100%;
+
+    clip-path: inset(0 round 1em);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #DDD;
+}

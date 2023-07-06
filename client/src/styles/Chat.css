@@ -1,0 +1,26 @@
+.Chat {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column-reverse;
+
+    background-color: #BBB;
+    
+    overflow-x: hidden;
+}
+
+.Message {
+    margin: 0 1em 0.5em 1em;
+    padding: 0.8em;
+    width: fit-content;
+    max-width: 70%;
+
+    border-radius: 2em;
+
+    background-color: #EEE;
+    color: #222;
+}
+
+.Message p {
+    margin: 0;
+}

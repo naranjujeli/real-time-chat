@@ -25,3 +25,12 @@ body > * {
 .root {
 
 }
+
+::-webkit-scrollbar {
+    width: .3rem;
+    background-color: #AAA;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
