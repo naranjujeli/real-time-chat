@@ -4,6 +4,12 @@ export default function TextInput({ messageContent, setMessageContent }) {
   }
   
   return (
-    <input className="TextInput" value={messageContent} onChange={handleChange} type="text" placeholder="Write your message..." />
+    <input
+    className="TextInput" 
+    type="text" 
+    placeholder="Write your message..." 
+    value={messageContent} 
+    onChange={handleChange} 
+    />
   );
 }
