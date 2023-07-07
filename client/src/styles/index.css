@@ -38,3 +38,11 @@ body > * {
 p {
     word-wrap: break-word;
 }
+
+input {
+    font-family: 'Roboto Mono', monospace;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+}
