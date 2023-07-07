@@ -1,9 +1,9 @@
-export default function TextInput({ setMessageContent }) {
+export default function TextInput({ messageContent, setMessageContent }) {
   function handleChange(event) {
     setMessageContent(event.target.value);
   }
   
   return (
-    <input className="TextInput" onChange={handleChange} type="text" placeholder="Write your message..." />
+    <input className="TextInput" value={messageContent} onChange={handleChange} type="text" placeholder="Write your message..." />
   );
 }

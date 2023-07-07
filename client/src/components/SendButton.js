@@ -1,8 +1,9 @@
-export default function SendButton({ socket, messageContent }) {
+export default function SendButton({ socket, messageContent, setMessageContent }) {
   function sendMessage() {
     if (messageContent != "") {
       console.log("Sending data: " + messageContent);
       socket.emit("new-message", { content: messageContent });
+      setMessageContent('');
     } else {
       alert("no papito, así no sirve");
     }

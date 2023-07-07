@@ -10,8 +10,8 @@ export default function ChatControls({ socket }) {
 
   return (
     <div className="ChatControls">
-      <TextInput setMessageContent={setMessageContent} />
-      <SendButton socket={socket} messageContent={messageContent} />
+      <TextInput messageContent={messageContent} setMessageContent={setMessageContent} />
+      <SendButton socket={socket} messageContent={messageContent} setMessageContent={setMessageContent} />
     </div>
   );
 }
