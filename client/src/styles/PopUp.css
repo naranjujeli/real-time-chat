@@ -1,0 +1,78 @@
+.PopUp {
+    position: absolute;
+
+    aspect-ratio: 4/3;
+    width: 90vmin;
+    max-width: 100vw;
+    
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+
+    border-radius: 1em;
+
+    box-shadow: 0 0 1em .1em black;
+
+    background-color: #DDD;
+}
+
+.PopUpMessage, .PopUpMessage {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+.PopUpMessage {
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PopUpMessage p {
+    margin: 0;
+    max-width: 90%;
+    max-height: 90%;
+
+    font-size: 4vmin;
+    color: #222;
+}
+
+.PopUpControls {
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+
+    grid-row: 4;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+}
+
+.PopUpControls button {
+    aspect-ratio: 4/3;
+    height: 90%;
+    
+    border-radius: 4em;
+
+    border: none;
+    outline: none;
+
+    background-color: #9DD;
+
+    font-size: 4vmin;
+    font-weight: bold;
+}
+
+.PopUpControls button:hover {
+    background-color: #7DD;
+}
+
+.PopUpControls button:focus {
+    outline: solid black 1px;
+}

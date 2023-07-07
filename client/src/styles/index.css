@@ -34,3 +34,7 @@ body > * {
 ::-webkit-scrollbar-thumb {
     background-color: #888;
 }
+
+p {
+    word-wrap: break-word;
+}

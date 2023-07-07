@@ -1,38 +1,21 @@
 .ChatControls {
+    padding: 2%;
     height: 10vh;
     min-height: 80px;
     
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
     background-color: #EEE;
 }
 
-.TextInput, .SendButton {
+.SendButton {
     border: none;
     outline: none;
 }
 
-.TextInput:focus, .SendButton:focus {
-    outline: outset black 1px;
-}
-
-.SendButton:hover {
-    background-color: #7DD;
-}
-
-.TextInput {
-    margin: 2%;
-    padding-left: 1em;
-    min-width: 0;
-
-    flex-grow: 1;
-
-    border-radius: 4em;
-}
-
 .SendButton {
-    margin: 2%; 
     padding: 0;
     aspect-ratio: 1/1;
     max-height: 100%;
@@ -40,6 +23,14 @@
     border-radius: 4em;
 
     background-color: #9DD;
+}
+
+.SendButton:focus {
+    outline: solid black 1px;
+}
+
+.SendButton:hover {
+    background-color: #7DD;
 }
 
 .SendButton svg{

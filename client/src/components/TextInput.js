@@ -1,14 +1,16 @@
-export default function TextInput({ messageContent, setMessageContent }) {
+import '../styles/TextInput.css';
+
+export default function TextInput({ content, setContent, placeholder }) {
   function handleChange(event) {
-    setMessageContent(event.target.value);
+    setContent(event.target.value);
   }
   
   return (
     <input
     className="TextInput" 
     type="text" 
-    placeholder="Write your message..." 
-    value={messageContent} 
+    placeholder={placeholder}
+    value={content} 
     onChange={handleChange} 
     />
   );

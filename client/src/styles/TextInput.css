@@ -1,0 +1,18 @@
+.TextInput {
+    margin: 0;
+    padding: 0 1em;
+    min-width: 0;
+    height: 90%;
+
+    flex-grow: .9;
+
+    border: none;
+    border-radius: 4em;
+    outline: none;
+
+    font-size: 4vmin;
+}
+
+.TextInput:focus {
+    outline: solid black 1px;
+}
