@@ -9,7 +9,7 @@ export default function ChatControls({ socket }) {
   const [ messageContent, setMessageContent ] = useState("");
 
   function sendMessage() {
-    if (messageContent != "") {
+    if (messageContent != "" && ! /^\s+$/.test(messageContent)) {
       socket.emit("new-message", { content: messageContent });
       setMessageContent('');
     } else {

@@ -4,7 +4,7 @@ import '../styles/PopUp.css';
 
 export default function PopUp({ message, answer, setAnswer, handleConfirm }) {  
   function checkEmpty() {
-    if (answer === "") {
+    if (answer === "" || /^\s+$/.test(answer)) {
       alert('Response can\'t be empty');
       return false;
     }
