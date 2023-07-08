@@ -12,7 +12,6 @@ export default function Chat({ socket }) {
 
     socket.on('update-messages-history', (data) => {
       setMessagesHistory(data.messagesHistory);
-      console.log(messagesHistory);
     });
   }, []);
   
@@ -36,7 +35,7 @@ export default function Chat({ socket }) {
       key={i} 
       username={messagesHistory[i].username}
       displayUsername={displayUsername}
-      own={messagesHistory[i].userId == socket.id}
+      own={messagesHistory[i].userId === socket.id}
       >
         {messagesHistory[i].content}
       </Message>

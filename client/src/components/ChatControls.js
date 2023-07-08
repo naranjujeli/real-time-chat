@@ -19,7 +19,12 @@ export default function ChatControls({ socket }) {
 
   return (
     <div className="ChatControls">
-      <TextInput placeholder="Write a message..." content={messageContent} setContent={setMessageContent} />
+      <TextInput 
+      placeholder="Write a message..." 
+      content={messageContent} 
+      setContent={setMessageContent} 
+      action={sendMessage}
+      />
       <SendButton handleClick={sendMessage} />
     </div>
   );

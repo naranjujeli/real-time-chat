@@ -1,10 +1,16 @@
 import '../styles/TextInput.css';
 
-export default function TextInput({ content, setContent, placeholder }) {
+export default function TextInput({ content, setContent, placeholder, action }) {
   function handleChange(event) {
     setContent(event.target.value);
   }
   
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      action();
+    }
+  }
+
   return (
     <input
     className="TextInput" 
@@ -12,6 +18,7 @@ export default function TextInput({ content, setContent, placeholder }) {
     placeholder={placeholder}
     value={content} 
     onChange={handleChange} 
+    onKeyDown={handleKeyDown}
     />
   );
 }
