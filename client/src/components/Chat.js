@@ -17,7 +17,7 @@ export default function Chat({ socket }) {
   let messageComponents = [];
   for (let i = 0; i < messagesHistory.length; i++) {
     messageComponents.push(
-      <Message key={i} username={messagesHistory[i].userId}>{messagesHistory[i].content}</Message>
+      <Message key={i} username={messagesHistory[i].username}>{messagesHistory[i].content}</Message>
     );
   }
 

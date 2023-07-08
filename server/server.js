@@ -19,15 +19,24 @@ io.engine.generateId = (req) => {
     return uuid.v4();
 }
 
+let users = {};
 let messagesHistory = [];
-io.on("connection", (socket) => {
-    console.log(`New connection: ${socket.id}`);
-    
+io.on("connection", (socket) => {    
     io.emit("update-messages-history", { messagesHistory });
 
+    socket.on("new-user-request", (data) => {
+        if (!Object.keys(users).includes(socket.id)) {
+            users[socket.id] = data.username;
+            io.sockets.sockets.get(socket.id).emit("new-user-accepted", { username: users[socket.id] });
+        }
+    })
+
     socket.on("new-message", (data) => {
-        console.log("Received data: " + data.content);
-        messagesHistory.push({ userId: socket.id, content: data.content });
+        messagesHistory.push({ 
+            username: users[socket.id], 
+            userId: socket.id, 
+            content: data.content 
+        });
         io.emit("update-messages-history", { messagesHistory });
     });
 });
