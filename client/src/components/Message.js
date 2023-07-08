@@ -1,6 +1,6 @@
 import '../styles/Message.css';
 
-export default function Message({ username, children, own }) {
+export default function Message({ username, children, displayUsername, own }) {
   return (
     <div 
     className="Message"
@@ -12,9 +12,9 @@ export default function Message({ username, children, own }) {
       }
     }
     >
-      <div className="MessageUsername">
+      { displayUsername && <div className="MessageUsername">
         <b>{username}</b>
-      </div>
+      </div> }
       <div 
       className="MessageContent"
       style={
