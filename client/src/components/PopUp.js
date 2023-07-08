@@ -20,6 +20,7 @@ export default function PopUp({ message, answer, setAnswer, handleConfirm }) {
         <TextInput
         content={answer}
         setContent={setAnswer}
+        action={handleConfirm}
         />
         <button onClick={() => {if (checkEmpty()) handleConfirm();}}>
           OK
