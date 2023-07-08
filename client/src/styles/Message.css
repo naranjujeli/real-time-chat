@@ -1,0 +1,25 @@
+.Message {
+    margin: 0 1em 0.5em 1em;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+.MessageUsername {
+    margin: .5em 0;
+}
+
+.MessageUsername b {
+    color: black;
+}
+
+.MessageContent {
+    padding: 0.8em;
+    width: fit-content;
+    max-width: 70%;
+    
+    border-radius: 2em;
+
+    color: #222;
+}

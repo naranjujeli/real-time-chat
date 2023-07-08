@@ -1,17 +1,34 @@
+import '../styles/Message.css';
+
 export default function Message({ username, children, own }) {
   return (
     <div 
     className="Message"
     style={
       own ? {
-        alignSelf: "end",
-        backgroundColor: "#4AF"
+        alignItems: "end"
       } : {
-        alignSelf: "start",
-        backgroundColor: "#EEE"
+        alignItems: "start"
       }
-    }>
-      <p><b>{username}</b> {children}</p>
+    }
+    >
+      <div className="MessageUsername">
+        <b>{username}</b>
+      </div>
+      <div 
+      className="MessageContent"
+      style={
+        own ? {
+          alignSelf: "end",
+          backgroundColor: "#4AF"
+        } : {
+          alignSelf: "start",
+          backgroundColor: "#EEE"
+        }
+      }
+      >
+        <p>{children}</p>
+      </div>
     </div>
   );
 }

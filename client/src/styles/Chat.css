@@ -8,18 +8,3 @@
     
     overflow-x: hidden;
 }
-
-.Message {
-    margin: 0 1em 0.5em 1em;
-    padding: 0.8em;
-    width: fit-content;
-    max-width: 70%;
-
-    border-radius: 2em;
-
-    color: #222;
-}
-
-.Message p {
-    margin: 0;
-}
