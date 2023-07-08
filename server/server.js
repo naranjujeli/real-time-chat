@@ -22,7 +22,7 @@ io.engine.generateId = (req) => {
 let users = {};
 let messagesHistory = [];
 io.on("connection", (socket) => {    
-    io.emit("update-messages-history", { messagesHistory });
+    emitUpdateMessagesHistory();
 
     socket.on("new-user-request", (data) => {
         if (!Object.keys(users).includes(socket.id)) {
@@ -37,9 +37,18 @@ io.on("connection", (socket) => {
             userId: socket.id, 
             content: data.content 
         });
-        io.emit("update-messages-history", { messagesHistory });
+        emitUpdateMessagesHistory();
+    });
+
+    socket.on("update-messages-history-request", () => {
+        emitUpdateMessagesHistory();
     });
 });
+
+function emitUpdateMessagesHistory() {
+    io.emit("update-messages-history", { messagesHistory });
+    return;
+}
 
 server.listen(PORT, () => {
     console.log(`Listening at port ${PORT}`);

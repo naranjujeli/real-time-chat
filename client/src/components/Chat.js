@@ -8,6 +8,8 @@ export default function Chat({ socket }) {
   const [messagesHistory, setMessagesHistory] = useState([]);
 
   useEffect(() => {
+    socket.emit("update-messages-history-request");
+
     socket.on('update-messages-history', (data) => {
       setMessagesHistory(data.messagesHistory);
     });
