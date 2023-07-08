@@ -22,7 +22,7 @@
  
     border-radius: 4em;
 
-    background-color: #9DD;
+    background-color: #4AF;
 }
 
 .SendButton:focus {
@@ -30,7 +30,7 @@
 }
 
 .SendButton:hover {
-    background-color: #7DD;
+    background-color: #4DF;
 }
 
 .SendButton svg{
