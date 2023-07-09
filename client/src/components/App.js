@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-import ChatContainer from './ChatContainer';
+import Chat from './Chat';
 import PopUp from './PopUp';
 
 import '../styles/App.css';
@@ -27,13 +27,17 @@ export default function App() {
 
   return (
     <div className="App">
-      {username && <ChatContainer socket={socket} />}
-      {!username && <PopUp
-      message="You need a username to enter this application. Please, write it below."
-      answer={usernamePopUpAnswer}
-      setAnswer={setUsernamePopUpAnswer}
-      handleConfirm={saveUsername}
-      />}
+      {username && 
+        <Chat socket={socket} />
+      }
+      {!username && 
+        <PopUp
+        message="You need a username to enter this application. Please, write it below."
+        answer={usernamePopUpAnswer}
+        setAnswer={setUsernamePopUpAnswer}
+        confirm={saveUsername}
+        />
+      }
     </div>
   );
 }

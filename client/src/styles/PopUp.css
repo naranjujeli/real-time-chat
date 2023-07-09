@@ -15,7 +15,7 @@
     background-color: #DDD;
 }
 
-.PopUpMessage, .PopUpMessage {
+.PopUpMessage {
     width: 100%;
     height: 100%;
 
@@ -53,27 +53,4 @@
     justify-content: space-between;
 
     box-sizing: border-box;
-}
-
-.PopUpControls button {
-    aspect-ratio: 4/3;
-    height: 100%;
-    
-    border-radius: 4em;
-
-    border: none;
-    outline: none;
-
-    background-color: #9DD;
-
-    font-size: 4vmin;
-    font-weight: bold;
-}
-
-.PopUpControls button:hover {
-    background-color: #7DD;
-}
-
-.PopUpControls button:focus {
-    outline: solid black 1px;
 }

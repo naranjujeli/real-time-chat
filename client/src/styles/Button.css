@@ -1,0 +1,20 @@
+.Button {
+    padding: 0;
+
+    border: none;
+    border-radius: 4em;
+    outline: none;
+
+    background-color: #9DD;
+    
+    font-size: 4vmin;
+    font-weight: bold;
+}
+
+.Button:hover {
+    background-color: #7DD;
+}
+
+.Button:focus {
+    outline: solid black 1px;
+}

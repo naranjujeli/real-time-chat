@@ -9,31 +9,3 @@
 
     background-color: #EEE;
 }
-
-.SendButton {
-    border: none;
-    outline: none;
-}
-
-.SendButton {
-    padding: 0;
-    aspect-ratio: 1/1;
-    max-height: 100%;
- 
-    border-radius: 4em;
-
-    background-color: #4AF;
-}
-
-.SendButton:focus {
-    outline: solid black 1px;
-}
-
-.SendButton:hover {
-    background-color: #4DF;
-}
-
-.SendButton svg{
-    max-width: 100%;
-    max-height: 100%;
-}

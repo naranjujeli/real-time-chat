@@ -1,0 +1,8 @@
+.SendButton {
+    aspect-ratio: 1/1;
+}
+
+.SendButton svg{
+    max-width: 100%;
+    max-height: 100%;
+}

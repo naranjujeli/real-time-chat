@@ -20,7 +20,7 @@ export default function Message({ username, children, displayUsername, own }) {
       style={
         own ? {
           alignSelf: "end",
-          backgroundColor: "#4AF"
+          backgroundColor: "#9DD"
         } : {
           alignSelf: "start",
           backgroundColor: "#EEE"
